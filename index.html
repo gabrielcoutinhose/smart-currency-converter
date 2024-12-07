@@ -13,6 +13,73 @@
     <title>Smart Currency Converter</title>
   </head>
   <body>
+    <div class="container">
+      <header>
+        <h1>Smart Currency Converter</h1>
+      </header>
+      <main>
+        <div class="converter">
+          <section class="first-currency">
+            <label for="currency">
+              Convert from
+              <select name="currency" id="currency">
+                <option value="USD" data-flag="assets/us.svg">$ - USD</option>
+                <option value="EUR" data-flag="assets/eu.svg">€ - EUR</option>
+                <option value="CHF" data-flag="assets/ch.svg">₣ - CHF</option>
+                <option value="BTC" data-flag="assets/btc.svg">₿ - BTC</option>
+              </select>
+            </label>
+          </section>
+          <section class="second-currency">
+            <label for="currency">
+              Convert to
+              <select name="currency" id="currency-2">
+                <option value="USD" data-flag="assets/us.svg">$ - USD</option>
+                <option value="EUR" data-flag="assets/eu.svg">€ - EUR</option>
+                <option value="CHF" data-flag="assets/ch.svg">₣ - CHF</option>
+                <option value="BTC" data-flag="assets/btc.svg">₿ - BTC</option>
+              </select>
+            </label>
+          </section>
+          <section class="value-to-convert">
+            <label for="value">
+              Value
+              <input
+                type="number"
+                id="value"
+                name="value"
+                min="0"
+                max="1000000000"
+                required
+                placeholder="insert a value"
+              />
+            </label>
+          </section>
+          <section class="box-result">
+            <p>Result</p>
+            <span>test</span>
+          </section>
+          <div class="btns">
+            <button class="converter-btn" type="button">Convert</button>
+            <button class="clean-btn" type="button">Clean</button>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="footer-items">
+          ©
+          <a class="creator" href="https://github.com/gabrielcoutinhose"
+            >gabrielcoutinhose</a
+          >
+          -
+          <a
+            class="copyright"
+            href="https://github.com/gabrielcoutinhose/smart-currency-converter/blob/main/LICENSE"
+            >MIT License</a
+          >
+        </div>
+      </footer>
+    </div>
     <script src="scripts.js"></script>
   </body>
 </html>
