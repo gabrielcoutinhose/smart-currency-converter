@@ -53,6 +53,12 @@ footer {
   border-radius: 6px;
 }
 
+header h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
 .first-currency,
 .second-currency,
 .value-to-convert,
@@ -116,10 +122,13 @@ option[value="BTC"] {
   outline: none;
 }
 .value-to-convert input::placeholder {
-  color: var(--text-color-light);
+  color: rgba(255, 255, 255, 0.7);
 }
 
-.box-result span {
+#result {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--accent-color);
   margin-left: 10px;
 }
 
@@ -131,8 +140,8 @@ option[value="BTC"] {
   gap: 0.5rem;
   padding: 0.5em;
 }
-.converter-btn,
-.clean-btn {
+#converter-btn,
+#reset-btn {
   border: none;
   border-radius: 6px;
   padding: 0.25em 0.25em;
@@ -142,15 +151,15 @@ option[value="BTC"] {
   background-color: var(--accent-color);
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
-.converter-btn:hover,
-.clean-btn:hover {
+#converter-btn:hover,
+#reset-btn:hover {
   opacity: 0.8;
   transform: scale(1.05);
   cursor: pointer;
 }
-.converter-btn:focus,
-.clean-btn:focus {
-  outline: 2px solid var(--focus-color);
+#converter-btn:focus,
+#reset-btn:focus {
+  outline: 2px solid var(--accent-color);
   outline-offset: 2px;
 }
 
@@ -163,4 +172,13 @@ option[value="BTC"] {
 .copyright:hover {
   opacity: 0.8;
   cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #121212;
+    --primary-color: #1e1e1e;
+    --text-color-light: #e0e0e0;
+    --text-color-dark: #ffffff;
+  }
 }
